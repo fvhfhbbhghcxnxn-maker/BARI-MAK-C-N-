@@ -6,6 +6,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Heart, Sparkles, HeartPulse } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const [noClickCount, setNoClickCount] = useState(0);
@@ -194,6 +195,8 @@ export default function App() {
       <div className="absolute bottom-4 right-4 opacity-50 hidden md:block">
         <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZ3R6Z3R6Z3R6Z3R6Z3R6Z3R6Z3R6Z3R6Z3R6JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/117P9MlBvxqSBi/giphy.gif" className="w-32 rounded-lg" referrerPolicy="no-referrer" />
       </div>
+
+      <Analytics />
     </div>
   );
 }
